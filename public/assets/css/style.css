@@ -1,0 +1,203 @@
+/* Lato & nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Nunito&display=swap');
+
+/* Variable */
+:root {
+    /* color */
+    --white: #fff;
+    --light: #FAFAFA;
+    --dark-green: #2F6063;
+    --orange: #F59048;
+    --grey: #AAA;
+    --black: #092217;
+
+    /* font */
+    --main-font: 'Lato', sans-serif;
+    --body-font: 'Nunito', sans-serif;;
+
+    /* box shadow */
+    --shadow-color: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
+
+    /* transtitions */
+    --main-trans: all 0.4s ease-in-out
+}
+/* End variable */
+
+
+/* Main style */
+* {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+}
+/* End main style */
+
+/* Color */
+.darkgreen {
+    color: var(--dark-green) !important;
+}
+.orange {
+    color: var(--orange) !important;
+}
+.black {
+    color: var(--black);
+}
+/* End color */
+
+/* Background color */
+.bglight {
+    background-color: var(--light) !important;
+}
+.bgwhite {
+    background-color: white !important;
+}
+.bgdarkgreen {
+    background-color: var(--dark-green);
+}
+.bgorange {
+    background-color: var(--orange);
+}
+.bgtrans {
+    background-color: transparent;
+}
+/* End background color */
+
+/* Font */
+.fs48 {
+    font-size: 48px !important;
+}
+.fs24 {
+    font-size: 24px !important;
+}
+.fs20 {
+    font-size: 20px !important;
+}
+.fs18 {
+    font-size: 18px !important;
+}
+.fs16 {
+    font-size: 16px !important;
+}
+.fs14 {
+    font-size: 14px !important;
+}
+.fs12 {
+    font-size: 12px !important;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+/* End font */
+
+/* Padding */
+.px {
+    padding: 60px 0;
+}
+.px40 {
+    padding: 40px 0;
+}
+.pt40 {
+    padding-top: 40px;
+}
+/* End padding */
+
+/* Margin */
+.mx {
+    margin: 60px 0;
+}
+.mt80 {
+    margin-top: 80px;
+}
+.mb40 {
+    margin-bottom: 40px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+/* End margin */
+
+/* Etc */
+.bdr__none {
+    border-radius: 0 !important;
+}
+
+/* Hero section */
+nav {
+    border-bottom: 1px solid white;
+}
+.hero__section button{
+    border-radius: 50px;
+    border-color: var(--orange);
+}
+.hero__section button:hover {
+    background-color: #E17C34;
+}
+/* End hero section */
+
+/* Inovasi */
+.inovasi__section .gambar {
+    height: 200px;
+    width: 200px;
+    background-color: var(--light);
+    border-radius: 25px;
+    /* margin: auto; */
+}
+.inovasi__content {
+    padding: 40px;
+}
+.inovasi__content h4 {
+    border-radius: 50px;
+    background-color: var(--orange);
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+/* End Inovasi */
+
+/* Saran */
+.saran__section {
+    border: 1px solid var(--dark-green);
+    border-radius: 25px;
+}
+.saran__content {
+    padding: 40px 5rem;
+}
+/* End Saran */
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    color: white;
+}
+.sosmed .icon {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 5px;
+}
+.copyright {
+    border-top: 1px solid white;
+    padding: 20px 0;
+}
+#insta {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+            /* Also define standard property for compatibility */
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+/* End footer */
