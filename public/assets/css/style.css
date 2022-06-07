@@ -19,7 +19,7 @@
     --shadow-color: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
 
     /* transtitions */
-    --main-trans: all 0.4s ease-in-out
+    --main-trans: all .6s ease-in-out
 }
 /* End variable */
 
@@ -84,6 +84,9 @@
 .fs12 {
     font-size: 12px !important;
 }
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
 h1 {
     font-size: 24px;
 }
@@ -106,7 +109,7 @@ h6 {
 
 /* Padding */
 .px {
-    padding: 60px 0;
+    padding: 80px 0;
 }
 .px40 {
     padding: 40px 0;
@@ -118,7 +121,7 @@ h6 {
 
 /* Margin */
 .mx {
-    margin: 60px 0;
+    margin: 80px 0;
 }
 .mt80 {
     margin-top: 80px;
@@ -129,6 +132,9 @@ h6 {
 .mb20 {
     margin-bottom: 20px;
 }
+.mb10 {
+    margin-bottom: 10px;
+}
 /* End margin */
 
 /* Etc */
@@ -136,7 +142,19 @@ h6 {
     border-radius: 0 !important;
 }
 
+/* Navbar */
+nav ul li a {
+    color: #bbb !important;
+}
+nav a:hover {
+    color: white !important;
+}
+/* End navbar */
+
 /* Hero section */
+.px__hero {
+    padding: 40px 20px;
+}
 nav {
     border-bottom: 1px solid white;
 }
@@ -158,13 +176,14 @@ nav {
     /* margin: auto; */
 }
 .inovasi__content {
-    padding: 40px;
+    padding: 80px 60px;
+    border-radius: 50px;
+    margin: auto;
 }
-.inovasi__content h4 {
+.inovasi__content .inovasi__desc {
     border-radius: 50px;
     background-color: var(--orange);
     padding: 5px 15px;
-    box-sizing: border-box;
 }
 /* End Inovasi */
 
@@ -201,3 +220,23 @@ footer a {
     -webkit-text-fill-color: transparent;
   }
 /* End footer */
+
+/* Responsive */
+
+/* Mobile small */
+@media screen and (max-width: 576px) {
+    /* Hero */
+    .px__hero {
+        padding: 40px 20px;
+    }
+
+    /* Inovasi */
+    .inovasi__section .gambar {
+        display: none;
+    }
+    .inovasi__content {
+        padding: 40px 30px;
+        width: 90% !important;
+    }
+}
+/* End responsive */

@@ -1,10 +1,10 @@
 <?= $this->extend('templates/template-user'); ?>
 
 <?= $this->section('content'); ?>
-<!-- Main page -->
 
+<!-- Main page -->
 <div class="hero__section bgdarkgreen">
-  <div class="px">
+  <div class="px__hero">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-12 text-white">
@@ -27,24 +27,30 @@
 </div>
 <div class="tentang__section px text-center bglight">
   <div class="container">
-    <h1 class="mb20 ">About Us</h1>
-    <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio magnam reprehenderit odit dicta voluptates eaque at iste. Ullam assumenda, dolorem maiores laborum cum error, architecto, dicta nemo rem libero expedita?</h2>
+    <h1 class="mb20 fw-bold">About Us</h1>
+    <div class="w-75 m-auto">
+      <h2>We are a company that is engaged in innovation in the health sector to increase public awareness
+        of the importance of technology in health and facilitate access to health services
+        for the community to help achieve the third goal of the SDGs.</h2>
+    </div>
   </div>
 </div>
 <div class="inovasi__section bglight">
-  <div class="inovasi__content bgdarkgreen px">
+  <div class="inovasi__content bgdarkgreen px w-75">
     <div class="row">
       <div class="col-md-3 col-12">
         <div class="gambar"></div>
       </div>
       <div class="col-md-9 col-12">
         <div class="d-flex justify-content-between align-items-center mb40">
-          <h1 class="orange">Smart Glucosemeter</h1>
-          <h4 class=" text-white">Innovation 1</h4>
+          <h1 class="orange fw-bold">Smart Glucosemeter</h1>
+          <div class="inovasi__desc">
+            <h4 class=" text-white">Innovation 1</h4>
+          </div>
         </div>
         <div class="text-white">
           <h2 class="mb10">Description</h2>
-          <h3>Early checking and monitoring of blood sugar is the key to preventing the risk of developing diabetes.
+          <h3 class="fs16">Early checking and monitoring of blood sugar is the key to preventing the risk of developing diabetes.
             Reaching 3rd SDGs, therefore, requires a closer look at strategies for educating regions that
             have poor knowledge of health especially ineducation-related to prevention and
             management procedures for this diabetes.
@@ -54,12 +60,14 @@
     </div>
   </div>
   <div class="mx">
-    <div class="inovasi__content bgdarkgreen px">
+    <div class="inovasi__content bgdarkgreen px w-75">
       <div class="row">
         <div class="col-md-9 col-12">
           <div class="d-flex justify-content-between align-items-center mb40">
-            <h4 class=" text-white">Innovation 2</h4>
-            <h1 class="orange">Voiry</h1>
+            <div class="inovasi__desc">
+              <h4 class=" text-white">Innovation 2</h4>
+            </div>
+            <h1 class="orange fw-bold">Voiry</h1>
           </div>
           <div class="text-white text-end">
             <h2 class="mb10">Description</h2>
@@ -90,7 +98,5 @@
     </div>
   </div>
 </div>
-
-
 <!-- End main page -->
 <?= $this->endSection(); ?>

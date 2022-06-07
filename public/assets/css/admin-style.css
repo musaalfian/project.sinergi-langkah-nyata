@@ -1,0 +1,235 @@
+
+footer {
+position: sticky;
+top: 100%;
+}
+.fw700 {
+font-weight: 700 !important;
+}
+/* Toogle responsive */
+#nav-toogle {
+display: none;
+}
+#nav-toogle:checked + .sidebar__section {
+width: 0px;
+transition: .3s;
+}
+#nav-toogle:checked + .sidebar__section .sidebar__menu .menu__content path,
+#nav-toogle:checked + .sidebar__section .sidebar__menu .menu__content i,
+#nav-toogle:checked + .sidebar__section .sidebar__menu .menu__content span {
+display: none;
+}
+#nav-toogle:checked ~ .main__section {
+margin-left: 0;
+}
+#nav-toogle:checked ~ .main__section .header {
+width: 100%;
+left: 0;
+}
+#nav-toogle:checked ~ .main__section .header .kosong {
+width: 0;
+}
+/* End toogle responsive */
+
+/* Sidebar */
+.sidebar__section {
+width: 345px;
+position: fixed;
+top: 0;
+left: 0;
+min-height: 100vh;
+transition: width 300ms;
+}
+.sidebar__brand {
+height: 6rem;
+box-sizing: border-box;
+border-bottom: 3px solid white;
+}
+
+.sidebar__menu .menu__content  button  {
+color: black;
+}
+.sidebar__section .sidebar__brand i {
+color: white !important;
+font-size: 1.5rem;
+}
+.me__icon {
+margin-left: .7rem ;
+}
+.menu__content {
+margin-top: 20px;
+margin-left:20%;
+margin-right:20%;
+padding: 7px 10px;
+}
+.menu__content button {
+border: none;
+background-color: transparent;
+font-size: 18px;
+color: white;
+font-family: var(--head-font);
+}
+#navAdmin path {
+color: white;
+}
+/* End sidebar */
+
+/* Main section */
+.main__section {
+background-color: var(--light);
+min-height: 100vh;
+}
+.main__section {
+margin-left: 345px;
+transition: margin-left 300ms;
+}
+.main__section .header {
+position: fixed;
+left: 345px;
+width: calc(100% - 345px);
+top: 0;
+z-index: 10;
+transition: width 300ms;
+}
+.main__section .header .kosong {
+width: 22%;
+transition: width 300ms;
+}
+.main__section .header {
+height: 5.9rem;
+box-sizing: border-box;
+border-left: 3px solid white;
+transition: left 300ms;
+}
+.main__content {
+margin-top: 5.9rem;
+}
+.menu__content a i {
+font-style: normal;
+font-size: 18px;
+width: 18px !important;
+}
+.menu__content:hover {
+background-color: white;
+}
+.menu__content:hover a i{
+color: black !important;
+}
+.menu__content:hover span{
+color: black !important;
+}
+/* End main section */
+
+/* Footer */
+footer {
+    background-color:  rgba(47, 96, 99, .1);
+}
+/* End footer */
+
+/* Responsive */
+@media screen and (max-width: 2560px) {
+.sidebar__section {
+    width: 300px;
+    transition: .3s;
+}
+.sidebar__menu .menu__content {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.sidebar__section .sidebar__menu .menu__content i {
+    display: inline;
+}
+.sidebar__section .sidebar__menu .menu__content span {
+    display: inline;
+}
+.main__section {
+    margin-left: 300px;
+}
+.main__section .header {
+    width: 100%;
+    left: 300px;
+}
+.sidebar__section .sidebar__brand i, .sidebar__section .sidebar__brand h3 {
+    display: inline;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.login__section {
+    justify-content: center;
+}
+.login__section .login__content {
+    width: 100%;
+}
+.login__section .kiri {
+    display: inline !important;
+    width: 100%;
+    min-height: 100vh;
+}
+.login__section .login__content {
+    padding: 4rem 1.5rem;
+}
+.login__section .kanan {
+    display: none !important;
+}
+}
+
+@media screen and (max-width: 992px) {
+.sidebar__section {
+    width: 200px;
+    transition: .3s;
+}
+.sidebar__menu .menu__content {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.sidebar__section .sidebar__menu .menu__content i {
+    display: inline;
+}
+.sidebar__section .sidebar__menu .menu__content span {
+    display: inline;
+}
+.main__section {
+    margin-left: 200px;
+}
+.main__section .header {
+    width: 100%;
+    left: 200px;
+}
+.sidebar__section .sidebar__brand i, .sidebar__section .sidebar__brand h3 {
+    display: none;
+}
+}
+
+@media screen and (max-width: 768px) {
+.sidebar__section {
+    width: 200px;
+    transition: .3s;
+}
+.sidebar__menu .menu__content {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.sidebar__section .sidebar__menu .menu__content i {
+    display: inline;
+}
+.sidebar__section .sidebar__menu .menu__content span {
+    display: inline;
+}
+.main__section {
+    margin-left: 200px;
+}
+.main__section .header {
+    width: 100%;
+    left: 200px;
+}
+.sidebar__section .sidebar__brand i, .sidebar__section .sidebar__brand h3 {
+    display: none;
+}
+.main__section .header a {
+    display: none !important;
+}
+}
+
+
+

@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/admin-style.css" />
 
     <!-- Datatables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
@@ -28,7 +29,7 @@
 <body>
     <!-- Sidebar section -->
     <input type="checkbox" name="" id="nav-toogle" />
-    <div class="sidebar__section">
+    <div class="sidebar__section bgdarkgreen">
         <div class="sidebar__brand d-flex align-items-center justify-content-center">
             <div class="d-flex justify-content-center px-2 py-3 align-items-center icon__admin">
                 <i class="fa-solid fa-user-gear me-2" id="navAdmin"></i>
@@ -39,37 +40,19 @@
             <div class="menu__content">
                 <a href="<?= base_url('admin/dashboard'); ?>" class="text-decoration-none">
                     <span class="text-white"><i class="bi bi-house-door-fill" id="navDashboard"></i></span>
-                    <span class="ms-2 fs18" id="navDashboard1">Dashboard</span>
+                    <span class="ms-2 fs18" id="navDashboard1">Tagline</span>
                 </a>
             </div>
             <div class="menu__content mt10">
                 <a href="<?= base_url('admin/dataSd'); ?>" class="text-decoration-none">
                     <span class="text-white"><i class="fa-solid fa-rectangle-list" id="navDataSd"></i></span>
-                    <span class="ms-2 fs18" id="navDataSd1">Data SD</span>
+                    <span class="ms-2 fs18" id="navDataSd1">Tim</span>
                 </a>
             </div>
             <div class="menu__content mt10">
                 <a href="<?= base_url('admin/dataSmp'); ?>" class="text-decoration-none">
                     <i class="fa-solid fa-rectangle-list" id="navDataSmp"></i>
-                    <span class="ms-2 fs18" id="navDataSmp1">Data SMP</span>
-                </a>
-            </div>
-            <div class="menu__content mt10">
-                <a href="<?= base_url('admin/strukturOrganisasi'); ?>" class="text-decoration-none">
-                    <i class="bi bi-person-lines-fill" id="navStrukturOrganisasi"></i>
-                    <span class="ms-2 fs18" id="navStrukturOrganisasi1">Struktur Organisasi</span>
-                </a>
-            </div>
-            <div class="menu__content mt10">
-                <a href="<?= base_url('admin/jabatan'); ?>" class="text-decoration-none">
-                    <i class="fa-solid fa-sitemap" id="navJabatan"></i>
-                    <span class="ms-2 fs18" id="navJabatan1">Jabatan</span>
-                </a>
-            </div>
-            <div class="menu__content mt10">
-                <a href="<?= base_url('admin/kotakSaran'); ?>" class="text-decoration-none">
-                    <i class="bi bi-chat-left-text-fill" id="navKotakSaran"></i>
-                    <span class="ms-2 fs18" id="navKotakSaran1">Kotak Saran</span>
+                    <span class="ms-2 fs18" id="navDataSmp1">Inovasi</span>
                 </a>
             </div>
             <div class="menu__content mt10">
@@ -84,16 +67,15 @@
 
     <div class="main__section">
         <!-- Header -->
-        <div class="header bgdarkblue d-flex justify-content-between align-items-center px-4">
+        <div class="header bgdarkgreen d-flex justify-content-between align-items-center px-4">
             <label for="nav-toogle">
                 <img src="<?= base_url('/assets/img/bar-putih.svg'); ?>" height="20px" alt="" for />
             </label>
             <a class="navbar-brand d-flex align-items-center" href="">
                 <img src="<?= base_url('/assets/img/logo-batang.png'); ?>" height="50px" alt="" />
-                <h4 class="text-white ff2 ms-2">
-                    Dinas Pendidikan dan Kebudayaan <br />
-                    Kabupaten Batang
-                </h4>
+                <h3 class="text-white">
+                    Sinergi Langkah Nyata
+                </h3>
             </a>
             <div class="kosong"></div>
         </div>

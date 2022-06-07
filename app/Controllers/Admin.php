@@ -2,14 +2,14 @@
 
 namespace App\Controllers;
 
-class User extends BaseController
+class Admin extends BaseController
 {
-    public function index()
+    public function dashboard()
     {
         $data = [
-            'title' => 'Beranda | Sinergi Langkah Nyata',
+            'title' => 'Dashboard | Admin',
         ];
-        return view('pages/user/index', $data);
+        return view('pages/admin/index', $data);
     }
     public function tim()
     {

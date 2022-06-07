@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/tim-style.css" />
 
     <!-- Datatables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
@@ -41,13 +42,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-end">
                     <li class="nav-item">
-                        <a class="nav-link text-white" id="beranda" aria-current="page" href="<?= base_url('user/index'); ?>">Beranda</a>
+                        <a class="nav-link" id="beranda" aria-current="page" href="<?= base_url('user/index'); ?>">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white ms-5" id="tentang" href="<?= base_url('user/tentang'); ?>">Tim</a>
+                        <a class="nav-link ms-5" id="tentang" href="<?= base_url('user/tim'); ?>">Tim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white ms-5" id="inovasi" href="<?= base_url('user/tentang'); ?>">Inovasi</a>
+                        <a class="nav-link ms-5" id="inovasi" href="<?= base_url('user/inovasi'); ?>">Inovasi</a>
                     </li>
                 </ul>
             </div>
