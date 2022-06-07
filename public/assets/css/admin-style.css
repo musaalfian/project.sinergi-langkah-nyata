@@ -62,6 +62,9 @@ margin-left:20%;
 margin-right:20%;
 padding: 7px 10px;
 }
+.menu__content span, .menu__content i, .menu__content path {
+    color: #bbb;
+}
 .menu__content button {
 border: none;
 background-color: transparent;
@@ -125,6 +128,12 @@ footer {
     background-color:  rgba(47, 96, 99, .1);
 }
 /* End footer */
+
+/* Tagline */
+.tagline__content {
+    border: 1px solid var(--dark-green);
+}
+/* End tagline */
 
 /* Responsive */
 @media screen and (max-width: 2560px) {
