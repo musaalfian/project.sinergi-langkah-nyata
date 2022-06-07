@@ -6,6 +6,9 @@
     /* color */
     --white: #fff;
     --light: #FAFAFA;
+    --blue: rgba(38, 151, 255, 1);
+    --red: rgba(243, 110, 110, 1);
+    --dark-blue: rgba(41, 69, 106, 1);
     --dark-green: #2F6063;
     --orange: #F59048;
     --grey: #AAA;
@@ -23,6 +26,26 @@
 }
 /* End variable */
 
+/* Background color */
+.bglight {
+    background-color: var(--light);
+}
+.bgwhite {
+    background-color: white;
+}
+.bggrey {
+    background-color: var(--grey);
+}
+.bgdarkblue {
+    background-color: var(--dark-blue);
+}
+.bgblue {
+    background-color: var(--blue);
+}
+.bgred {
+    background-color: var(--red);
+}
+/* End background color */
 
 /* Main style */
 * {
@@ -42,6 +65,21 @@
 .black {
     color: var(--black);
 }
+.grey {
+    color: var(--grey);
+}
+.darkblue {
+    color: var(--dark-blue);
+}
+.blue {
+    color: var(--blue);
+}
+.red {
+    color: var(--red);
+}
+.lightlattegray {
+    color: lightslategray;
+} 
 /* End color */
 
 /* Background color */
@@ -63,6 +101,18 @@
 /* End background color */
 
 /* Font */
+.fw600 {
+    font-weight: 600 !important;
+}
+.ff1 {
+    font-family: var(--head-font);
+}
+.ff2 {
+    font-family: var(--body-font);
+}
+.fsbig {
+    font-size: 10rem !important;
+}
 .fs48 {
     font-size: 48px !important;
 }
@@ -134,6 +184,9 @@ h6 {
 /* Etc */
 .bdr__none {
     border-radius: 0 !important;
+}
+.active {
+    color: white !important;
 }
 
 /* Hero section */
