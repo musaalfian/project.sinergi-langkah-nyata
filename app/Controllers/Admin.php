@@ -11,4 +11,11 @@ class Admin extends BaseController
         ];
         return view('admin/index', $data);
     }
+    public function team()
+    {
+        $data = [
+            'title' => 'Team | Admin - Sinergi Langkah Nyata',
+        ];
+        return view('admin/data-team', $data);
+    }
 }

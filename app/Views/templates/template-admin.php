@@ -68,13 +68,13 @@
             <div class="menu__content mt10">
                 <a href="<?= base_url('admin/dataSd'); ?>" class="text-decoration-none">
                     <i class="fa-solid fa-rectangle-list" id="navDataSd"></i>
-                    <span class="ms-2 fs18" id="navDataSd1">Data SD</span>
+                    <span class="ms-2 fs18" id="navDataSd1">Innovation</span>
                 </a>
             </div>
             <div class="menu__content mt10">
-                <a href="<?= base_url('admin/dataSmp'); ?>" class="text-decoration-none">
+                <a href="<?= base_url('admin/team'); ?>" class="text-decoration-none">
                     <i class="fa-solid fa-rectangle-list" id="navDataSmp"></i>
-                    <span class="ms-2 fs18" id="navDataSmp1">Data SMP</span>
+                    <span class="ms-2 fs18" id="navDataSmp1">Team</span>
                 </a>
             </div>
             <div class="menu__content mt10">

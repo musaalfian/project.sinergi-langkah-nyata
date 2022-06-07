@@ -2,6 +2,32 @@
 /*                ADMIN                */
 /* *********************************** */
 
+// Data Team
+$(document).ready(function () {
+  $("#dataTeam").DataTable({
+    // pageLength: 5,
+    language: {
+      info: "Menampilkan _END_ dari _TOTAL_ baris",
+      infoEmpty: "Menampilkan 0 sampai 0 of 0 baris",
+      infoFiltered: "(filtered from MAX total entries)",
+      infoPostFix: "",
+      thousands: ",",
+      lengthMenu: "Menampilkan _MENU_ baris",
+      loadingRecords: "Loading...",
+      processing: "Memproses...",
+      search: "Cari:",
+      zeroRecords: "Tidak ada data yang ditemukan",
+      paginate: {
+        first: "First",
+        last: "Last",
+        next: "Selanjutnya",
+        previous: "Sebelumnya",
+      },
+    },
+  });
+});
+// End data Team
+
 // Show/hide password
 var state = false;
 
