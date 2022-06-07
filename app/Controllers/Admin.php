@@ -4,25 +4,18 @@ namespace App\Controllers;
 
 class Admin extends BaseController
 {
-    public function dashboard()
+    public function index()
     {
         $data = [
-            'title' => 'Dashboard | Admin',
+            'title' => 'Dashboard | Admin - Sinergi Langkah Nyata',
         ];
-        return view('pages/admin/index', $data);
+        return view('admin/index', $data);
     }
-    public function tim()
+    public function team()
     {
         $data = [
-            'title' => 'Our Team | Sinergi Langkah Nyata',
+            'title' => 'Team | Admin - Sinergi Langkah Nyata',
         ];
-        return view('pages/user/tim', $data);
-    }
-    public function inovasi()
-    {
-        $data = [
-            'title' => 'Innovation | Sinergi Langkah Nyata',
-        ];
-        return view('pages/user/inovasi', $data);
+        return view('admin/data-team', $data);
     }
 }
