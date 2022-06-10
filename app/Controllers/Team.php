@@ -33,14 +33,6 @@ class Team extends BaseController
     }
     public function saveAddTeam()
     {
-        // validation 
-        if (!$this->validate([
-            'name_team'    => 'required',
-            'position_team'      => 'required',
-            'member_img'      => 'required',
-        ])) {
-            return redirect()->to('/team/team')->withInput();
-        }
         $sumTeam = $this->MTeam->countAllResults();
         $id_team = 'SLN' . $sumTeam + 1;
 
@@ -50,8 +42,8 @@ class Team extends BaseController
         // dd($member_img);
         if ($member_img->getError() != 4) {
             // move image file to folder image
-            $name_member_img = $member_img->getName();
-            $member_img->move('assets/images/team');
+            $name_member_img = $member_img->getRandomName();
+            $member_img->move('assets/images/team', $name_member_img);
         } else {
             $name_member_img = null;
         }
