@@ -37,7 +37,7 @@
                 </h3>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon d-inline"><i class="fa-solid fa-bars text-white"></i></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-end">
@@ -61,73 +61,55 @@
     <!-- Footer -->
     <footer class="bgdarkgreen pt40 mt80 text-white">
         <div class="container">
-            <div class="row mb40">
-                <div class="col-md-6 text-md-start text-center col-12">
-                    <h2 class="mb10">Sinergi Langkah Nyata</h2>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, inventore? Labore odit eligendi eos cumque sit architecto veritatis assumenda nesciunt repellat ex? Nesciunt quibusdam veniam earum aliquam. Aspernatur, vero quibusdam?</h3>
+            <div class="row mb40 justify-content-between">
+                <div class="col-md-6 col-12 mb40">
+                    <h2 class="mb10 fw-bold">Sinergi Langkah Nyata</h2>
+                    <div class="desc darklight">
+                        <h3>We are a company that is engaged in innovation in the health sector to increase public awareness
+                            of the importance of technology in health and facilitate access to health services
+                            for the community to help achieve the third goal of the SDGs.
+                        </h3>
+                    </div>
                 </div>
                 <div class="col-md-6 col-12">
-                    <div class="d-flex justify-content-end">
+                    <div class="nav__footer d-flex justify-content-start">
+                        <div class="item me-5">
+                            <a href="">
+                                <h3 class="mb10 fw-bold">Innovation</h3>
+                            </a>
+                            <a href="">
+                                <h3 class="mb-2 darklight">Smart Glucosemeter</h3>
+                            </a>
+                            <a href="">
+                                <h3 class="mb-2 darklight">Voiry</h3>
+                            </a>
+                        </div>
                         <div class="item">
                             <a href="">
-                                <h3 class="mb20">Services</h3>
+                                <h3 class="mb10 fw-bold">About</h3>
                             </a>
                             <a href="">
-                                <h4 class="mb10">Lorem ipsum</h4>
-                            </a>
-                            <a href="">
-                                <h4 class="mb10">Lorem ipsum</h4>
-                            </a>
-                            <a href="">
-                                <h4 class="mb10">Lorem ipsum</h4>
-                            </a>
-                        </div>
-                        <div class="item ms-5">
-                            <a href="">
-                                <h3 class="mb20">Our Team</h3>
-                            </a>
-                            <a href="">
-                                <h4 class="mb10">Lorem ipsum</h4>
-                            </a>
-                            <a href="">
-                                <h4 class="mb10">Lorem ipsum</h4>
-                            </a>
-                            <a href="">
-                                <h4 class="mb10">Lorem ipsum</h4>
-                            </a>
-                        </div>
-                        <div class="item ms-5">
-                            <a href="">
-                                <h3 class="mb20">About</h3>
-                            </a>
-                            <a href="">
-                                <h4 class="mb10">Lorem ipsum</h4>
-                            </a>
-                            <a href="">
-                                <h4 class="mb10">Lorem ipsum</h4>
-                            </a>
-                            <a href="">
-                                <h4 class="mb10">Lorem ipsum</h4>
+                                <h3 class="mb-2 darklight">Our Team</h3>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="sosmed mb20">
-                <div class="d-flex">
+                <div class="content d-flex">
                     <a href="">
                         <div class="d-flex justify-content-center align-items-center icon">
-                            <i class="fa-brands fa-instagram" id="insta" area-hidden="true"></i>
+                            <i class="fa-brands fa-instagram" id="insta"></i>
                         </div>
                     </a>
                     <a href="" class="ms-3">
                         <div class="d-flex justify-content-center align-items-center icon">
-                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-facebook" id="facebook"></i>
                         </div>
                     </a>
                     <a href="" class="ms-3">
                         <div class="d-flex justify-content-center align-items-center icon">
-                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-twitter" id="twitter"></i>
                         </div>
                     </a>
                 </div>
