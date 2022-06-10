@@ -133,6 +133,24 @@ $("#edit_img_innovation").change(function (e) {
   );
   $("label[for='edit_img_innovation" + "']").append(file);
 });
+
+// project radio
+if ($('input[name="project"]:checked').val() == "impact") {
+  $("#label_impact").show();
+  $("#label_feature").hide();
+} else {
+  $("#label_impact").hide();
+}
+$('input[name="project"]').change(function () {
+  // console.log(this.value);
+  if (this.value == "impact") {
+    $("#label_feature").hide();
+    $("#label_impact").show();
+  } else {
+    $("#label_feature").show();
+    $("#label_impact").hide();
+  }
+});
 // end Innovation
 // End active tab
 /* *********************************** */

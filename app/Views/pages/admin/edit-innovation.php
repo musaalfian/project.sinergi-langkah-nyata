@@ -14,6 +14,21 @@
     </div>
     <div class="tagline__section mb20">
         <h2 class="fw-bold darkgreen mb10">Innovation Edit</h2>
+
+        <div class="alert alert-primary">
+            Note for Uniqueness and Project Impact:
+            <ol>
+                <li>list can contain numbers, title, and description (optional).
+                </li>
+                <li>the title and description separator is a colon (:)
+                </li>
+                <li>end of list contains semicolon (;)
+                </li>
+                <li>example = 1. A Daily reminder to take care the loved ones : We hope that with the use of
+                    this non-invasive Glucosemeter, we can always take care of our loved ones around us;
+                </li>
+            </ol>
+        </div>
         <form action="/innovation/saveEditInnovation/<?= $innovation['id_innovation']; ?>" method="post"
             enctype="multipart/form-data" class="needs-validation" novalidate>
             <input hidden type="text" name="image_old" value="<?= $innovation['image_innovation']; ?>">
@@ -40,32 +55,38 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="impact" class="form-label">Project Impact<span class="red">*</span></label>
+                    <div class="mb-3 impact_feature">
+                        <label>Project</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="project" id="project1" value="impact"
+                                <?= ($category_project == 'impact') ? 'checked' : ''; ?>>
+                            <label class="form-check-label" for="project1">
+                                Impact
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="project" id="project2" value="feature"
+                                <?= ($category_project == 'feature') ? 'checked' : ''; ?>>
+                            <label class="form-check-label" for="project2">
+                                Feature
+                            </label>
+                        </div>
+                        <label for="projectInput" class="form-label" id="label_impact">
+                            Project Impact
+                        </label>
+                        <label for="projectInput" class="form-label" id="label_feature">
+                            Project Feature
+                        </label><span class="red">*</span>
                         <div class="form-floating">
                             <textarea
                                 class="form-control p-2 <?= ($validation->hasError('project_impact')) ? 'is-invalid' : ''; ?>"
                                 name="project_impact" required id="impact"
-                                style="height: 100px"><?php foreach ($impact as $impact) : ?><?= $impact ?><?php endforeach ?></textarea>
+                                style="height: 100px"><?php foreach ($project as $project) : ?><?= $project ?><?php endforeach ?></textarea>
                             <div class="invalid-feedback">
                                 <?= ($validation->getError('project_impact') == '') ? 'Project Impact is required' : str_replace('_', ' ', $validation->getError('project_impact')); ?>
                                 <!-- Project Impact is required -->
                             </div>
                         </div>
-                    </div>
-                    <div class="alert alert-primary">
-                        Note for Uniqueness and Project Impact:
-                        <ol>
-                            <li>list can contain numbers, title, and description (optional).
-                            </li>
-                            <li>the title and description separator is a colon (:)
-                            </li>
-                            <li>end of list contains semicolon (;)
-                            </li>
-                            <li>example = 1. A Daily reminder to take care the loved ones : We hope that with the use of
-                                this non-invasive Glucosemeter, we can always take care of our loved ones around us;
-                            </li>
-                        </ol>
                     </div>
                 </div>
                 <div class="col-md-6 col-12">

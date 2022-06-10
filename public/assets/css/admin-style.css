@@ -124,8 +124,21 @@ color: black !important;
 .menu__content:hover span{
 color: black !important;
 }
+.gambar {
+    width: 100%;
+    padding: 16px;
+}
 /* End main section */
 
+/* Innovation */
+
+
+/* Radio Input #1 */
+input#one:checked ~ .check { transform: translate(-50px, 33px); }
+
+/* Radio Input #2  */
+input#two:checked ~ .check { transform: translate(-50px, -25px); }
+/* EndInnovation */
 /* Footer */
 footer {
     background-color:  rgba(47, 96, 99, .1);
