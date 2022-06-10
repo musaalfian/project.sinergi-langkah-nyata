@@ -80,6 +80,9 @@
 .lightlattegray {
     color: lightslategray;
 } 
+.white{
+    color: white !important;
+}
 /* End color */
 
 /* Background color */

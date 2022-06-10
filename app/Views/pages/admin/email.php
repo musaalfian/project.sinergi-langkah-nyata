@@ -18,38 +18,48 @@
                     </thead>
                     <tbody>
                         <!-- Data -->
+                        <?php if ($email == null) : ?>
+                        <tr>
+                            <td colspan="4" class="text-center">No data entered yet</td>
+                        </tr>
+                        <?php endif ?>
+                        <?php foreach ($email as $email) : ?>
                         <tr>
                             <td scope="row" class="text-center">1</td>
-                            <td>19-08-2021</td>
-                            <td>musa@gmail.com</td>
+                            <td><?= $email['created_at']; ?></td>
+                            <td><?= $email['email']; ?></td>
                             <td>
                                 <div class="btn__hapus">
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="button bg-transparent border-0" data-bs-toggle="modal" data-bs-target="#modal_">
+                                    <button type="button" class="button bg-transparent border-0" data-bs-toggle="modal"
+                                        data-bs-target="#modal_<?= $email['id_users_email']; ?>">
                                         <i class="bi bi-trash3-fill red"></i>
                                     </button>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="modal_>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="modal_<?= $email['id_users_email']; ?>" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h3 class="modal-title fw-bold" id="exampleModalLabel">
-                                                        Konfirmasi
+                                                        Confirm
                                                     </h3>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <h4 style="text-align: left">
-                                                        Yakin ingin menghapus data?
+                                                        Are you sure want to delete?
                                                     </h4>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                                        Batal
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">
+                                                        Cancel
                                                     </button>
-                                                    <a href="">
+                                                    <a href="/admin/deleteEmail/<?= $email['id_users_email']; ?>">
                                                         <button type="button" class="btn btn-danger">
-                                                            Hapus
+                                                            Delete
                                                         </button>
                                                     </a>
                                                 </div>
@@ -59,6 +69,7 @@
                                 </div>
                             </td>
                         </tr>
+                        <?php endforeach ?>
                         <!-- End data -->
                     </tbody>
                 </table>

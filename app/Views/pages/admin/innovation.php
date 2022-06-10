@@ -7,6 +7,14 @@
         <h2 class="fw-bold darkgreen mb10">Innovation</h2>
         <div class="tab-pane fade show active bgwhite" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="tabel__section px-3 table-responsive pt20 pb20">
+                <div class="d-flex justify-content-between my-3">
+                    <h3 class="darkblue fw-bold">Latest Innovation</h3>
+                    <a href="/innovation/addInnovation">
+                        <button type="button" class="btn btn-primary align-self-end">
+                            Add Innovation <i class="bi bi-plus text-white"></i>
+                        </button>
+                    </a>
+                </div>
                 <table class="table table-responsive table-hover mb20i border-bottom-0" id="dataSekolahSd">
                     <thead>
                         <tr>
@@ -17,41 +25,50 @@
                     </thead>
                     <tbody>
                         <!-- Data -->
+                        <?php $i = 1 ?>
+                        <?php foreach ($innovation as $innovation) : ?>
                         <tr>
-                            <td scope="row" class="text-center">1</td>
-                            <td>Smart Glucosemeter</td>
+                            <td scope="row" class="text-center"><?= $i++; ?></td>
+                            <td><?= $innovation['name_innovation']; ?></td>
                             <td>
                                 <div class="d-flex justify-content-center">
                                     <div class="btn__edit me-2">
-                                        <a href="<?= base_url('admin/detailInovasi'); ?>" class=" text-decoration-none">Detail</a>
+                                        <a href="<?= base_url('innovation/detailInnovation/' . $innovation['id_innovation']); ?>"
+                                            class=" text-decoration-none">Detail</a>
                                     </div>
                                     <div class="btn__hapus">
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="button bg-transparent border-0" data-bs-toggle="modal" data-bs-target="#modal_">
+                                        <button type="button" class="button bg-transparent border-0"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#modal_<?= $innovation['id_innovation']; ?>">
                                             <i class="bi bi-trash3-fill red"></i>
                                         </button>
                                         <!-- Modal -->
-                                        <div class="modal fade" id="modal_>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="modal_<?= $innovation['id_innovation']; ?>"
+                                            tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h3 class="modal-title fw-bold" id="exampleModalLabel">
-                                                            Konfirmasi
+                                                            Confirm
                                                         </h3>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
                                                         <h4 style="text-align: left">
-                                                            Yakin ingin menghapus data?
+                                                            Are you sure want to delete?
                                                         </h4>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                                            Batal
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">
+                                                            Cancel
                                                         </button>
-                                                        <a href="">
+                                                        <a
+                                                            href="/innovation/deleteInnovation/<?= $innovation['id_innovation']; ?>">
                                                             <button type="button" class="btn btn-danger">
-                                                                Hapus
+                                                                Delete
                                                             </button>
                                                         </a>
                                                     </div>
@@ -62,6 +79,7 @@
                                 </div>
                             </td>
                         </tr>
+                        <?php endforeach ?>
                         <!-- End data -->
                     </tbody>
                 </table>

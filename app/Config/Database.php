@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'sinergi-langkah-nyata',
+        'database' => 'sinergi_langkah_nyata',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
