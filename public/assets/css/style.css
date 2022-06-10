@@ -87,6 +87,9 @@ body {
 .darklight {
     color: var(--darklight);
 }
+.white{
+    color: white !important;
+}
 /* End color */
 
 /* Background color */

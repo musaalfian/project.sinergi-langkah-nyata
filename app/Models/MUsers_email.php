@@ -4,13 +4,13 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MUniqueness extends Model
+class MUsers_email extends Model
 {
-    protected $table = 'uniqueness';
+    protected $table = 'users_email';
 
-    protected $primaryKey = 'id_uniqueness';
+    protected $primaryKey = 'id_users_email';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_uniqueness', 'id_innovation', 'name_uniqueness', 'description_uniqueness'];
+    protected $allowedFields = ['id_users_email', 'email'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';

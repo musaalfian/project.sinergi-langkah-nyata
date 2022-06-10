@@ -10,7 +10,7 @@ class MInnovation extends Model
 
     protected $primaryKey = 'id_innovation';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_innovation', 'name_innovation', 'description_inovation', 'image_innovation'];
+    protected $allowedFields = ['id_innovation', 'name_innovation', 'description_innovation', 'image_innovation'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';

@@ -2,6 +2,30 @@
 /*                ADMIN                */
 /* *********************************** */
 
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  "use strict";
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll(".needs-validation");
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
+
 // Data Team
 $(document).ready(function () {
   $("#dataTeam").DataTable({
@@ -58,51 +82,58 @@ function toogle2() {
 
 // Active tab
 $(document).ready(function () {
-  if (document.title == "Dashboard | Admin - Sinergi Langkah Nyata") {
-    $("#navDashboard, #navDashboard1").addClass("active");
-  } else if (document.title == "Data Sekolah Dasar | Admin") {
-    $("#navDataSd, #navDataSd1").addClass("active");
-  } else if (document.title == "Data Sekolah Menengah Pertama | Admin") {
-    $("#navDataSmp, #navDataSmp1").addClass("active");
-  } else if (document.title == "Struktur Organisasi | Admin") {
-    $("#navStrukturOrganisasi, #navStrukturOrganisasi1").addClass("active");
-  } else if (document.title == "Kotak Saran | Admin") {
-    $("#navKotakSaran, #navKotakSaran1").addClass("active");
-  } else if (document.title == "Detail Sekolah Dasar | Admin") {
-    $("#navDataSd, #navDataSd1").addClass("active");
-  } else if (document.title == "Edit Sekolah Dasar | Admin") {
-    $("#navDataSd, #navDataSd1").addClass("active");
-  } else if (document.title == "Detail Sekolah Menengah Pertama | Admin") {
-    $("#navDataSmp, #navDataSmp1").addClass("active");
-  } else if (document.title == "Edit Sekolah Menengah Pertama | Admin") {
-    $("#navDataSmp, #navDataSmp1").addClass("active");
-  } else if (document.title == "Tambah Data Sekolah Dasar | Admin") {
-    $("#navDataSd, #navDataSd1").addClass("active");
-  } else if (document.title == "Tambah Tenaga Pendidik Sekolah Dasar | Admin") {
-    $("#navDataSd, #navDataSd1").addClass("active");
-  } else if (document.title == "Edit Tenaga Pendidik Sekolah Dasar | Admin") {
-    $("#navDataSd, #navDataSd1").addClass("active");
-  } else if (document.title == "Tambah Data Sekolah Menengah Pertama | Admin") {
-    $("#navDataSmp, #navDataSmp1").addClass("active");
-  } else if (
-    document.title == "Tambah Tenaga Pendidik Sekolah Menengah Pertama | Admin"
-  ) {
-    $("#navDataSmp, #navDataSmp1").addClass("active");
-  } else if (
-    document.title == "Edit Tenaga Pendidik Sekolah Menengah Pertama | Admin"
-  ) {
-    $("#navDataSmp, #navDataSmp1").addClass("active");
-  } else if (document.title == "Edit Struktur Organisasi | Admin") {
-    $("#navStrukturOrganisasi, #navStrukturOrganisasi1").addClass("active");
-  } else if (document.title == "Data Tenaga Pendidik | Admin") {
-    $("#navDataTenagaPendidik, #navDataTenagaPendidik1").addClass("active");
-  } else if (document.title == "Jabatan | Admin") {
-    $("#navJabatan, #navJabatan1").addClass("active");
-  } else if (document.title == "Edit Jabatan | Admin") {
-    $("#navJabatan, #navJabatan1").addClass("active");
+  if (document.title == "Tagline | Admin - Sinergi Langkah Nyata") {
+    $("#navTagline, #navTagline1").addClass("white");
+  } else if (document.title == "Team | Admin - Sinergi Langkah Nyata") {
+    $("#navTeam, #navTeam1").addClass("white");
+  } else if (document.title == "Innovation | Admin - Sinergi Langkah Nyata") {
+    $("#navInnovation, #navInnovation1").addClass("white");
+  } else if (document.title == "Users Email | Admin - Sinergi Langkah Nyata") {
+    $("#navEmail, #navEmail1").addClass("white");
   }
 });
 
+// Input File Image
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    console.log("htdhd");
+    reader.onload = function (e) {
+      $(input)
+        .parent(".input-file-image")
+        .find(".img-upload-preview")
+        .attr("src", e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$('.input-file-image input[type="file"').change(function () {
+  readURL(this);
+});
+
+// Innovation
+$("#img_innovation").change(function () {
+  if (this.files[0].size > 5242880) {
+    $(this).addClass("is-invalid");
+    this.value = "";
+  } else {
+    $(this).removeClass("is-invalid");
+    $(this).addClass("is-valid");
+  }
+});
+
+$("#edit_img_innovation").change(function (e) {
+  var file = e.target.files[0].name;
+  $("label[for='edit_img_innovation" + "']").empty();
+  $("label[for='edit_img_innovation" + "']").append(
+    '<a class="btn btn-secondary">Pilih File</a>'
+  );
+  $("label[for='edit_img_innovation" + "']").append(file);
+});
+// end Innovation
 // End active tab
 /* *********************************** */
 /*              END ADMIN              */
