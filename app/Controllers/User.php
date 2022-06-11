@@ -9,7 +9,7 @@ use App\Models\MTeam;
 use App\Models\MTestimonial;
 use App\Models\MUniqueness;
 use App\Models\MUsers_email;
-
+use App\Models\MSocmed;
 
 
 class User extends BaseController
@@ -20,6 +20,7 @@ class User extends BaseController
     protected $MTeam;
     protected $MTestimonial;
     protected $MUniqueness;
+    protected $MSocmed;
     protected $MUsers_email;
 
     public function __construct()
@@ -31,6 +32,7 @@ class User extends BaseController
         $this->MTestimonial = new MTestimonial();
         $this->MUniqueness = new MUniqueness();
         $this->MUsers_email = new MUsers_email();
+        $this->MSocmed = new MSocmed();
         $this->db = \Config\Database::connect();
         // $UsersModel = new \Myth\Auth\Models\UserModel();
     }
@@ -44,7 +46,7 @@ class User extends BaseController
         }
         // dd($innovation_data);
         $data = [
-            'title' => 'Beranda | Sinergi Langkah Nyata',
+            'title' => 'Home | Sinergi Langkah Nyata',
             'tagline'   => $tagline,
             'innovation'   => $innovation_data,
         ];
@@ -53,13 +55,17 @@ class User extends BaseController
     public function team()
     {
         $innovation = $this->MInnovation->findAll();
-        $team = $this->MTeam->findAll();
+        $team = $this->MTeam->orderBy('position_team', 'ASC')->findAll();
+        foreach ($team as $team) {
+            $team['socmed'] = $this->MSocmed->where('id_team', $team['id_team'])->findAll();
+            $team_data[] = $team;
+        }
         $leader = $this->MTeam->where('position_team', 'leader')->find();
-        // dd($leader);
+        // dd($team_data);
         $data = [
             'title' => 'Our Team | Sinergi Langkah Nyata',
             'innovation'   => $innovation,
-            'team'   => $team,
+            'team'   => $team_data,
             'leader'   => $leader[0],
         ];
         return view('pages/user/team', $data);

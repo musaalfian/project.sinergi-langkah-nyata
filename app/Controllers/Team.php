@@ -27,7 +27,7 @@ class Team extends BaseController
             'Linkedin',
             'Twitter'
         ];
-        $team = $this->MTeam->findAll();
+        $team = $this->MTeam->orderBy('position_team', 'ASC')->findAll();
         foreach ($team as $team) {
             $team['socmed'] = $this->MSocmed->where('id_team', $team['id_team'])->findAll();
             $team_data[] = $team;

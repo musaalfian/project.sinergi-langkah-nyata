@@ -35,28 +35,23 @@
 <div class="tim__card">
     <div class="container">
         <div class="row justify-content-center">
-            <?php foreach ($team as $team) : ?>
+            <?php foreach ($team as $team_data) : ?>
             <div class="col-sm-6 col-lg-4 mb-4 col-12">
                 <div class="card__content">
-                    <img src="<?= base_url(); ?>/assets/images/team/<?= $team['photo_team']; ?>"
+                    <img src="<?= base_url(); ?>/assets/images/team/<?= $team_data['photo_team']; ?>"
                         class="gambar bglight mb20"></img>
                     <div class="desc mb20">
-                        <h3 class="fw-bold mb-1"><?= $team['name_team']; ?></h3>
-                        <h4><?= ucfirst($team['position_team']); ?></h4>
+                        <h3 class="fw-bold mb-1"><?= $team_data['name_team']; ?></h3>
+                        <h4><?= ucfirst($team_data['position_team']); ?></h4>
                     </div>
                     <div class="d-flex">
-                        <a href="" class=" text-decoration-none">
+                        <?php foreach ($team_data['socmed'] as $socmed) : ?>
+                        <a href="<?= $socmed['link_social_media']; ?>" class=" text-decoration-none">
                             <div class="icon d-flex justify-content-center align-items-center me-3"><i
-                                    class="fa-brands fa-instagram text-white fs16"></i></div>
+                                    class="fa-brands <?= ($socmed['name_social_media'] == 'Intagram') ? 'fa-instagram' : (($socmed['name_social_media'] == 'Linkedin') ? 'fa-linkedin-in' : 'fa-twitter'); ?>  text-white fs16"></i>
+                            </div>
                         </a>
-                        <a href="" class=" text-decoration-none">
-                            <div class="icon d-flex justify-content-center align-items-center me-3"><i
-                                    class="fa-brands fa-twitter text-white fs16"></i></div>
-                        </a>
-                        <a href="" class=" text-decoration-none">
-                            <div class="icon d-flex justify-content-center align-items-center"><i
-                                    class="fa-brands fa-linkedin-in text-white fs16"></i></div>
-                        </a>
+                        <?php endforeach ?>
                     </div>
                 </div>
             </div>
