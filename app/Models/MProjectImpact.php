@@ -10,7 +10,7 @@ class MProjectImpact extends Model
 
     protected $primaryKey = 'id_project_impact';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_project_impact', 'id_innovation', 'name_project_impact', 'description_project_impact'];
+    protected $allowedFields = ['id_project_impact', 'category', 'id_innovation', 'name_project_impact', 'description_project_impact'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';

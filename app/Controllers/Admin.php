@@ -75,4 +75,9 @@ class Admin extends BaseController
         ];
         return view('pages/admin/email', $data);
     }
+    public function deleteEmail($id_email)
+    {
+        $this->MUsers_email->delete($id_email);
+        return redirect()->to('/admin/email');
+    }
 }

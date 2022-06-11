@@ -26,7 +26,7 @@
                         <?php foreach ($email as $email) : ?>
                         <tr>
                             <td scope="row" class="text-center">1</td>
-                            <td><?= $email['created_at']; ?></td>
+                            <td><?= date_format(date_create($email['created_at']), 'd-m-Y'); ?></td>
                             <td><?= $email['email']; ?></td>
                             <td>
                                 <div class="btn__hapus">

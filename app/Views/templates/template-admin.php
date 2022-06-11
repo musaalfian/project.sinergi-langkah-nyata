@@ -97,10 +97,11 @@
         <!-- Header -->
         <div class="header bgdarkgreen d-flex justify-content-between align-items-center px-4">
             <label for="nav-toogle">
-                <img src="<?= base_url('/assets/img/bar-putih.svg'); ?>" height="20px" alt="" for />
+                <i class="fas fa-bars white" style="cursor: pointer;"></i>
+                <!-- <img src="<?= base_url('/assets/img/bar-putih.svg'); ?>" height="20px" alt="" for /> -->
             </label>
             <a class="navbar-brand d-flex align-items-center" href="">
-                <img src="<?= base_url('/assets/img/logo-batang.png'); ?>" height="50px" alt="" />
+                <img src="<?= base_url(); ?>" height="50px" alt="" />
                 <h3 class="text-white">
                     Sinergi Langkah Nyata
                 </h3>
