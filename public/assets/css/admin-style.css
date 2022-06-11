@@ -151,6 +151,44 @@ footer {
 }
 /* End tagline */
 
+/* Login */
+.masuk {
+    min-height: 100vh;
+}
+.masuk__content {
+    min-height: 100vh;
+    background-color: white;
+}
+.masuk .masuk__gambar {
+    min-height: 100vh;
+}
+.masuk__content span {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+}
+.masuk__content input {
+    font-size: 14px;
+}
+.masuk__content input:focus {
+    box-shadow: 0 0 15px 0.25rem rgba(47, 96, 99, .10);
+    border-color: var(--dark-green);
+}
+.masuk__content button:hover {
+    background-color: var(--dark-green);
+    box-shadow: 0 0 15px 0.25rem rgba(47, 96, 99, .25);
+}
+.masuk__gambar {
+    position: relative;
+}
+.masuk__gambar img {
+    position: absolute;
+    width: 79%;
+    height: auto;
+    right: 0;
+}
+/* End login */
+
 /* Responsive */
 @media screen and (max-width: 2560px) {
 .sidebar__section {

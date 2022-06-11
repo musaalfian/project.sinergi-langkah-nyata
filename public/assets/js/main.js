@@ -152,6 +152,34 @@ $('input[name="project"]').change(function () {
 });
 // end Innovation
 // End active tab
+
+// Show/hide password
+var state = false;
+
+function toogle() {
+  if (state) {
+    document.getElementById("sandi").setAttribute("type", "password");
+    document.getElementById("eye").style.color = "#000";
+    state = false;
+  } else {
+    document.getElementById("sandi").setAttribute("type", "text");
+    document.getElementById("eye").style.color = "rgba(38, 151, 255, 1)";
+    state = true;
+  }
+}
+
+function toogle2() {
+  if (state) {
+    document.getElementById("ulangiSandi").setAttribute("type", "password");
+    document.getElementById("eye2").style.color = "#000";
+    state = false;
+  } else {
+    document.getElementById("ulangiSandi").setAttribute("type", "text");
+    document.getElementById("eye2").style.color = "rgba(38, 151, 255, 1)";
+    state = true;
+  }
+}
+// End show/hide password
 /* *********************************** */
 /*              END ADMIN              */
 /* *********************************** */
