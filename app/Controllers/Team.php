@@ -3,31 +3,45 @@
 namespace App\Controllers;
 
 use App\Models\MTeam;
+use App\Models\MSocmed;
 
 
 
 class Team extends BaseController
 {
     protected $MTeam;
+    protected $MSocmed;
 
     public function __construct()
     {
         $this->MTeam = new MTeam();
+        $this->MSocmed = new MSocmed();
         $this->db = \Config\Database::connect();
         // $UsersModel = new \Myth\Auth\Models\UserModel();
     }
 
     public function team()
     {
+        $socmed = [
+            'Intagram',
+            'Linkedin',
+            'Twitter'
+        ];
         $team = $this->MTeam->findAll();
+        foreach ($team as $team) {
+            $team['socmed'] = $this->MSocmed->where('id_team', $team['id_team'])->findAll();
+            $team_data[] = $team;
+        }
+        // dd($team_data);
         $sumTeam = $this->MTeam->countAllResults();
         session();
         $validation = \Config\Services::validation();
         $data = [
             'title' => 'Team | Admin - Sinergi Langkah Nyata',
             'validation'    => $validation,
-            'team'  => $team,
-            'sumTeam' => $sumTeam
+            'team'  => $team_data,
+            'sumTeam' => $sumTeam,
+            'socmed' => $socmed,
         ];
         return view('pages/admin/team', $data);
     }
@@ -48,14 +62,32 @@ class Team extends BaseController
             $name_member_img = null;
         }
 
+
+        // insert data team
         $data = [
             'id_team'   => $id_team,
             'name_team' => $this->request->getVar('name_team'),
             'position_team' => $this->request->getVar('position_team'),
             'motivational_words' => $this->request->getVar('motivational_words'),
-            'photo_team'    => $name_member_img
+            'photo_team'    => $name_member_img,
         ];
         $this->MTeam->insert($data);
+
+        // Socmed
+        $socmed = [
+            'Intagram',
+            'Linkedin',
+            'Twitter'
+        ];
+        foreach ($socmed as $socmed) {
+            $data_socmed = [
+                'name_social_media' => $socmed,
+                'link_social_media' => $this->request->getVar('link_' . $socmed),
+                'id_team'   => $id_team
+            ];
+            // dd($data_socmed);
+            $this->MSocmed->insert($data_socmed);
+        }
         return redirect()->to('/team/team');
     }
     public function saveEditTeam($id_team)
@@ -82,6 +114,23 @@ class Team extends BaseController
             'photo_team'    => $name_member_img
         ];
         $this->MTeam->update($id_team, $data);
+
+        // Socmed
+        $socmed = [
+            'Intagram',
+            'Linkedin',
+            'Twitter'
+        ];
+        $this->MSocmed->where('id_team', $id_team)->delete();
+        foreach ($socmed as $socmed) {
+            $data_socmed = [
+                'name_social_media' => $socmed,
+                'link_social_media' => $this->request->getVar('link_' . $socmed),
+                'id_team'   => $id_team
+            ];
+            // dd($data_socmed);
+            $this->MSocmed->insert($data_socmed);
+        }
         return redirect()->to('/team/team');
     }
     public function deleteTeam($id_team)

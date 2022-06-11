@@ -14,7 +14,7 @@
 .innovation__content .inovasi__desc {
     display: none;
 }
-.innovation__content h5 {
+.innovation__content h5, .innovation__content p{
     color: var(--darklight);
 }
 .btn__dropdown {
@@ -58,7 +58,8 @@
         padding: 60px 40px;
     }
     .innovation__content .main__gambar {
-        min-height: 250px;
+        max-height: 250px;
+        object-fit: contain;
     }
 }
 

@@ -50,17 +50,32 @@ class User extends BaseController
         ];
         return view('pages/user/index', $data);
     }
-    public function tim()
+    public function team()
     {
+        $innovation = $this->MInnovation->findAll();
+        $team = $this->MTeam->findAll();
+        $leader = $this->MTeam->where('position_team', 'leader')->find();
+        // dd($leader);
         $data = [
             'title' => 'Our Team | Sinergi Langkah Nyata',
+            'innovation'   => $innovation,
+            'team'   => $team,
+            'leader'   => $leader[0],
         ];
-        return view('pages/user/tim', $data);
+        return view('pages/user/team', $data);
     }
-    public function inovasi()
+    public function innovation()
     {
+        $innovation = $this->MInnovation->findAll();
+        foreach ($innovation as $innovation) {
+            $innovation['uniq'] = $this->MUniqueness->where('id_innovation', $innovation['id_innovation'])->findAll();
+            $innovation['project'] = $this->MProjectImpact->where('id_innovation', $innovation['id_innovation'])->findAll();
+            $innovation_data[] = $innovation;
+        }
+        // dd($innovation_data);
         $data = [
             'title' => 'Innovation | Sinergi Langkah Nyata',
+            'innovation'   => $innovation_data,
         ];
         return view('pages/user/innovation', $data);
     }

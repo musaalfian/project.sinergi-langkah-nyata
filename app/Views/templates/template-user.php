@@ -50,13 +50,13 @@
                 <ul class="navbar-nav align-items-end">
                     <li class="nav-item">
                         <a class="nav-link" id="beranda" aria-current="page"
-                            href="<?= base_url('user/index'); ?>">Beranda</a>
+                            href="<?= base_url('user/index'); ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-5" id="tentang" href="<?= base_url('user/tim'); ?>">Tim</a>
+                        <a class="nav-link ms-5" id="tentang" href="<?= base_url('user/team'); ?>">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-5" id="inovasi" href="<?= base_url('user/inovasi'); ?>">Inovasi</a>
+                        <a class="nav-link ms-5" id="inovasi" href="<?= base_url('user/innovation'); ?>">Innovation</a>
                     </li>
                 </ul>
             </div>
