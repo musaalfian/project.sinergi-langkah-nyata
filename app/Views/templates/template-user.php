@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/tim-style.css" />
+    <link rel="stylesheet" href="/assets/css/innovation-style.css" />
 
     <!-- Datatables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
@@ -74,9 +75,7 @@
                 <div class="col-md-6 col-12">
                     <div class="nav__footer d-flex justify-content-start">
                         <div class="item me-5">
-                            <a href="">
-                                <h3 class="mb10 fw-bold">Innovation</h3>
-                            </a>
+                            <h3 class="mb10 fw-bold">Innovation</h3>
                             <a href="">
                                 <h3 class="mb-2 darklight">Smart Glucosemeter</h3>
                             </a>
@@ -85,9 +84,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="">
-                                <h3 class="mb10 fw-bold">About</h3>
-                            </a>
+                            <h3 class="mb10 fw-bold">About</h3>
                             <a href="">
                                 <h3 class="mb-2 darklight">Our Team</h3>
                             </a>

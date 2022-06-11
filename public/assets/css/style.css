@@ -189,6 +189,9 @@ h6 {
 .mb60 {
     margin-bottom: 60px;
 }
+.mt20 {
+    margin-top: 20px;
+}
 .mb40 {
     margin-bottom: 40px;
 }
@@ -438,6 +441,8 @@ footer h3 {
         background-color: var(--orange);
         border-radius: 25px;
     }
+
+    /*================== Saran ================== */
     .saran {
         width: 70%;
     }
@@ -525,13 +530,5 @@ footer h3 {
         font-size: 24px;
         margin-bottom: 40px;
     }
-
-    /*================== Hero ================== */
-    .inovasi__content {
-    }
 }
-
-
-
-
 /* End responsive */

@@ -1,34 +1,129 @@
 /* Hero */
 .hero__tim {
-    padding: 80px 0;
+    display: none;
 }
-.hero__tim .foto__leader {
-    width: 400px;
+
+/* .hero__tim .foto__leader {
+    width: 100%;
     height: 300px;
-}
-.hero__tim .caption {
-    width: 600px;
-    height: 300px;
-}
+    background-image: url('/assets/img/leader-sample.png');
+} */
+
 /* End hero */
 
 /* Card */
-.card__content {
-    padding: 2rem;
+.tim__card .card__content {
+    padding: 1.5rem;
     border: 1px solid var(--dark-green);
     border-radius: 25px;
 }
-.card__content .gambar {
-    height: 300px;
+.card__content:hover {
+    box-shadow: rgba(47, 96, 99, .3) 0px 8px 24px;
+    transform: translate(0, -5px);
+    transition: .4s;
 }
-.card__content .icon {
+.tim__card .gambar {
+    background-image: url('/assets/img/myfoto.jpg');
+    width: 100%;
+    min-height: 300px;
+    background-size: cover;
+    border-radius: 25px;
+}
+.tim__card .card__content .icon {
     width: 30px;
     height: 30px;
     background-color: var(--dark-green);
     border-radius: 50%;
+    transition: .5s;
 }
-.card__content:hover {
-    box-shadow: rgba(47, 96, 99, .3) 0px 8px 24px;
-    transition: var(--main-trans);
-}
+.tim__card a:nth-child(1) .icon:hover {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+
+} 
+.tim__card a:nth-child(2) .icon:hover {
+    background-color: #1DA1F2;
+} 
+.tim__card a:nth-child(3) .icon:hover {
+    background-color: #0e76a8;  
+} 
+
 /* End ard */
+
+/*=================== Responsive =================== */
+
+/* Mobile */
+@media screen and (min-width: 576px) {
+    /*================== Saran ================== */
+    
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .hero__tim {
+        display: block;
+        padding: 80px 0;
+    }
+    .hero__tim .foto__leader img {
+        max-width: 400px;
+        height: auto;
+    }
+    .hero__tim .caption {
+        width: 100%;
+        min-height: 300px;
+        position: relative;
+    }
+    .hero__tim .caption h1 {
+        font-size: 1.5rem;
+    }
+    .hero__tim .caption h2, .hero__tim .caption h3 {
+        position: absolute;
+        font-size: 2.5rem;
+    }
+    .hero__tim .caption h2 {
+        top: 20%;
+        left: -8%;
+    }
+    .hero__tim .caption h3 {
+        bottom: 20%;
+        right: 8%;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+    /*================== Our team ================== */
+    .team h2 {
+        font-size: 24px;
+    }
+    .team h4 {
+        font-size: 20px;
+    }
+    .tim__card .gambar {
+        min-height: 400px;
+    }
+    .team .desc {
+        width: 80%;
+    }
+    .hero__tim .foto__leader img {
+        max-width: 600px;
+    }
+    .hero__tim .caption h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+    .hero__tim .caption h1 {
+        font-size: 2rem;
+    }
+    .hero__tim .caption h2 {
+        top: 20%;
+        left: -5%;
+    }
+    .hero__tim .caption h3 {
+        bottom: 20%;
+        right: 5%;
+    }
+}
+/* End responsive */

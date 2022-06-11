@@ -23,6 +23,6 @@ class User extends BaseController
         $data = [
             'title' => 'Innovation | Sinergi Langkah Nyata',
         ];
-        return view('pages/user/inovasi', $data);
+        return view('pages/user/innovation', $data);
     }
 }
