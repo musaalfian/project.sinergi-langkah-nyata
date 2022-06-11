@@ -86,6 +86,21 @@
                                                     </div>
                                                 </div>
                                                 <!-- end member image -->
+                                                <p>Social Media</p>
+                                                <div class="row">
+                                                    <?php foreach ($socmed as $socmed_add) : ?>
+                                                    <div class="col-6 mt-2">
+                                                        <label class="form-check-label" for="<?= $socmed_add; ?>">
+                                                            <?= ucfirst($socmed_add); ?>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-6 mt-2">
+                                                        <input type="text" class="form-control"
+                                                            id="link_<?= $socmed_add; ?>"
+                                                            name="link_<?= $socmed_add; ?>">
+                                                    </div>
+                                                    <?php endforeach ?>
+                                                </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
@@ -230,6 +245,23 @@
                                                                 </div>
                                                             </div>
                                                             <!-- end member image -->
+                                                            <p>Social Media</p>
+                                                            <div class="row">
+                                                                <?php foreach ($dataTeam['socmed'] as $socmed_edit) : ?>
+                                                                <div class="col-6 mt-2">
+                                                                    <label class="form-check-label"
+                                                                        for="<?= $socmed_edit['name_social_media']; ?>">
+                                                                        <?= ucfirst($socmed_edit['name_social_media']); ?>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-6 mt-2">
+                                                                    <input type="text" class="form-control"
+                                                                        id="link_<?= $socmed_edit['name_social_media']; ?>"
+                                                                        value="<?= $socmed_edit['link_social_media']; ?>"
+                                                                        name="link_<?= $socmed_edit['name_social_media']; ?>">
+                                                                </div>
+                                                                <?php endforeach ?>
+                                                            </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary"

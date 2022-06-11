@@ -26,7 +26,7 @@
   });
 })();
 
-// Data Team
+// Team
 $(document).ready(function () {
   $("#dataTeam").DataTable({
     // pageLength: 5,
@@ -50,7 +50,6 @@ $(document).ready(function () {
     },
   });
 });
-// End data Team
 
 // Show/hide password
 var state = false;
@@ -162,4 +161,4 @@ $('input[name="project"]').change(function () {
 /* *********************************** */
 $(".btn__dropdown").click(function () {
   $(this).toggleClass("down");
-})
+});
