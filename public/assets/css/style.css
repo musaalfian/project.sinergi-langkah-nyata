@@ -303,6 +303,9 @@ nav {
     padding: 40px 20px;
     border-radius: 25px;
     margin: auto;
+    background-color: #2b7478;
+    background-image: linear-gradient(327deg, #2b7478 0%, #1b4c4f 100%);
+
 }
 .inovasi__content .inovasi__desc {
     display: none;
