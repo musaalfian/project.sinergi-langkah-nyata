@@ -190,3 +190,14 @@ function toogle2() {
 $(".btn__dropdown").click(function () {
   $(this).toggleClass("down");
 });
+
+// Active tab
+$(document).ready(function () {
+  if (document.title == "Home | Sinergi Langkah Nyata") {
+    $("#home").addClass("white");
+  } else if (document.title == "Our Team | Sinergi Langkah Nyata") {
+    $("#team").addClass("white");
+  } else if (document.title == "Innovation | Sinergi Langkah Nyata") {
+    $("#innovation").addClass("white");
+  }
+});
