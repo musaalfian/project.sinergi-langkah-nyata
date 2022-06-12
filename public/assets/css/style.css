@@ -249,7 +249,7 @@ nav {
     border-bottom: 1px solid white;
 }
 .hero {
-    padding: 60px 0;
+    padding: 180px 0;
 }
 .hero .gambar {
     display: none;
@@ -278,21 +278,15 @@ nav {
 .inovasi__header {
     display: inline !important;
 }
+.inovasi__header img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
 .inovasi__header .voiry {
     text-align: end;
 }
 .inovasi .gambar1 {
-    width: 100%;
-    min-height: 150px;
-    background-color: white;
-    border-radius: 25px;
-    margin: 10px 0;
-}
-.inovasi .gambar2 {
-    width: 100%;
-    min-height: 150px;
-    background-color: white;
-    border-radius: 25px;
     margin: 10px 0;
 }
 .inovasi .gambar {
@@ -305,7 +299,6 @@ nav {
     margin: auto;
     background-color: #2b7478;
     background-image: linear-gradient(327deg, #2b7478 0%, #1b4c4f 100%);
-
 }
 .inovasi__content .inovasi__desc {
     display: none;
@@ -361,6 +354,11 @@ footer h2 {
 footer h3 {
     font-size: 16px;
 }
+footer .logo__indo img {
+    /* width: 50%; */
+    /* height: auto; */
+    /* object-fit: contain; */
+}
 #insta, #facebook, #twitter {
     transition: .5s;
 }
@@ -413,9 +411,6 @@ footer h3 {
 /* Tablet */
 @media screen and (min-width: 768px) {
     /*================== Hero ================== */
-    .hero {
-        padding: 80px 0;
-    }
     .hero .gambar {
         display: block;
     }
@@ -428,8 +423,6 @@ footer h3 {
         display: block;
         width: 100%;
         height: 100%;
-        background-color: white;
-        border-radius: 25px;
     }
     .inovasi__content .gambar1, .inovasi__content .gambar2 {
         display: none;
@@ -469,10 +462,6 @@ footer h3 {
 /* Desktop */
 @media screen and (min-width: 992px) {
     /*================== Hero ================== */
-    .hero {
-        padding: 100px 0;
-        /* min-height: 100vh; */
-    }
     .hero h2 {
         font-size: 20px !important;
     }
@@ -521,7 +510,7 @@ footer h3 {
 @media screen and (min-width: 1440px) {
     /*================== Hero ================== */
     .hero {
-        min-height: calc(100vh - 80px);
+        min-height: 100vh;
         padding: 0;
     }
 

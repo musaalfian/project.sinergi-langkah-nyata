@@ -67,11 +67,11 @@
                 <div class="col-md-6 col-12 mb40">
                     <h2 class="mb10 fw-bold">Sinergi Langkah Nyata</h2>
                     <div class="desc darklight">
-                        <h3>We are a company that is engaged in innovation in the health sector to increase public
-                            awareness
-                            of the importance of technology in health and facilitate access to health services
-                            for the community to help achieve the third goal of the SDGs.
+                        <h3>This website has been produced with the assistance of the Indonesia2030 and Indonesia Maju Foundation.
                         </h3>
+                    </div>
+                    <div class="logo__indo">
+                        <img src="<?= base_url('assets/img/logo-2030.png'); ?>" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 col-12">

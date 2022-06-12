@@ -6,10 +6,10 @@
 .innovation__content .inovasi__header {
     display: inline;
 }
-.innovation__content .gambar1 {
+.innovation__content img {
     width: 100%;
-    min-height: 200px; 
-    border-radius: 25px;
+    object-fit: contain;
+    max-height: 200px;
 }
 .innovation__content .inovasi__desc {
     display: none;
@@ -38,12 +38,6 @@
     .innovation__content .inovasi__desc {
         display: inline;
     }
-    .innovation__content .main__gambar {
-        width: 100%;
-        min-height: 150px;
-        background-color: white;
-        border-radius: 25px;
-    }
     .innovation__content .inovasi__desc {
         display: block;
         padding: 5px 15px;
@@ -56,10 +50,6 @@
 @media screen and (min-width: 768px) {
     .innovation__content {
         padding: 60px 40px;
-    }
-    .innovation__content .main__gambar {
-        max-height: 250px;
-        object-fit: contain;
     }
 }
 
