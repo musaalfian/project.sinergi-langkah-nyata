@@ -5,13 +5,14 @@
 <!-- Main page -->
 <div class="hero__tim bgdarkgreen">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-between">
             <div class="col-md-4 mb-2 mb-md-0 col-12">
                 <div class="foto__leader d-flex justify-content-center">
-                    <img src="<?= base_url('/assets/img/leader-sample.png'); ?>" alt="">
+                    <!-- <img src="<?= base_url('/assets/img/leader-sample.png'); ?>" alt=""> -->
+                    <img src="<?= base_url(); ?>/assets/images/team/<?= $leader['photo_team']; ?>" alt="">
                 </div>
             </div>
-            <div class="col-md-8 col-12">
+            <div class="col-md-7 col-12">
                 <div class="caption d-flex align-items-center">
                     <h1 class="text-white"><?= $leader['motivational_words']; ?>.</h1>
                     <h2 class="text-white"><i class="fa-solid fa-quote-left"></i></h2>
@@ -46,9 +47,10 @@
                     </div>
                     <div class="d-flex">
                         <?php foreach ($team_data['socmed'] as $socmed) : ?>
-                        <a href="<?= $socmed['link_social_media']; ?>" class=" text-decoration-none">
+                        <a href="<?= ($socmed['name_social_media'] == 'Email') ? 'mailto:' . $socmed['link_social_media'] : $socmed['link_social_media']; ?>"
+                            class=" text-decoration-none">
                             <div class="icon d-flex justify-content-center align-items-center me-3"><i
-                                    class="fa-brands <?= ($socmed['name_social_media'] == 'Intagram') ? 'fa-instagram' : (($socmed['name_social_media'] == 'Linkedin') ? 'fa-linkedin-in' : 'fa-twitter'); ?>  text-white fs16"></i>
+                                    class=" <?= ($socmed['name_social_media'] == 'Intagram') ? 'fa-brands fa-instagram' : (($socmed['name_social_media'] == 'Linkedin') ? 'fa-brands fa-linkedin-in' : 'fa-solid fa-envelope'); ?>  text-white fs16"></i>
                             </div>
                         </a>
                         <?php endforeach ?>

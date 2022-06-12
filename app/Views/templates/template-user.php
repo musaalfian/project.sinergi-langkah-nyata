@@ -6,13 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="We are a company that is engaged in innovation in the health sector to increase public awareness of the importance of technology in health and facilitate access to health services for the community to help achieve the third goal of the SDGs.">
+    <meta name="author" content="Sinergi Langkah Nyata">
+    <meta name="keywords" content="sinergilangkahnyata,SinergiLangkahNyata,SLN,sinergi,langkah,nyata,sinergilangkah">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="Sinergi Langkah Nyata" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="Sinergi Langkah Nyata" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description"
+        content="We are a company that is engaged in innovation in the health sector to increase public awareness of the importance of technology in health and facilitate access to health services for the community to help achieve the third goal of the SDGs." />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
     <!-- Fontawesome Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" />
@@ -37,9 +59,9 @@
                     Sinergi Langkah Nyata
                 </h3>
             </a>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon d-inline"><i class="fa-solid fa-bars text-white"></i></span> -->
+                <span class="navbar-toggler-icon d-inline"><i class="fa-solid fa-bars text-white"></i></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-end">
@@ -50,7 +72,8 @@
                         <a class="nav-link ms-5" id="team" href="<?= base_url('user/team'); ?>">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-5" id="innovation" href="<?= base_url('user/innovation'); ?>">Innovation</a>
+                        <a class="nav-link ms-5" id="innovation"
+                            href="<?= base_url('user/innovation'); ?>">Innovation</a>
                     </li>
                 </ul>
             </div>
@@ -79,9 +102,9 @@
                         <div class="item me-5">
                             <h3 class="mb10 fw-bold">Innovation</h3>
                             <?php foreach ($innovation as $innovation_footer) : ?>
-                                <a href="/user/innovation">
-                                    <h3 class="mb-2 darklight"><?= $innovation_footer['name_innovation']; ?></h3>
-                                </a>
+                            <a href="/user/innovation">
+                                <h3 class="mb-2 darklight"><?= $innovation_footer['name_innovation']; ?></h3>
+                            </a>
                             <?php endforeach ?>
                         </div>
                         <div class="item">
@@ -95,19 +118,19 @@
             </div>
             <div class="sosmed mb20">
                 <div class="content d-flex">
-                    <a href="">
+                    <a href="" target="_blank">
                         <div class="d-flex justify-content-center align-items-center icon">
                             <i class="fa-brands fa-instagram" id="insta"></i>
                         </div>
                     </a>
-                    <a href="" class="ms-3">
+                    <!-- <a href="" class="ms-3">
                         <div class="d-flex justify-content-center align-items-center icon">
                             <i class="fa-brands fa-facebook" id="facebook"></i>
                         </div>
-                    </a>
-                    <a href="" class="ms-3">
+                    </a> -->
+                    <a href="mailto:Sinergilangkahnyata@gmail.com" class="ms-3">
                         <div class="d-flex justify-content-center align-items-center icon">
-                            <i class="fa-brands fa-twitter" id="twitter"></i>
+                            <i class="fa-solid fa-envelope" id="twitter"></i>
                         </div>
                     </a>
                 </div>
@@ -120,7 +143,8 @@
     <!-- End footer -->
 
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
     <!-- JS Custom -->

@@ -9,7 +9,7 @@
         <div class="desc m-auto">
             <h4 class="lightlattegray">Our expert team is made up of creatives with technical knowhow, strategists who
                 think
-                outside of the box, dan developers who push innovation
+                outside of the box, and developers who push innovation
             </h4>
         </div>
     </div>
