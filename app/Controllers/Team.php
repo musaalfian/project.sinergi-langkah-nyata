@@ -25,7 +25,7 @@ class Team extends BaseController
         $socmed = [
             'Intagram',
             'Linkedin',
-            'Twitter'
+            'Email'
         ];
         $team = $this->MTeam->orderBy('position_team', 'ASC')->findAll();
         foreach ($team as $team) {
@@ -77,7 +77,7 @@ class Team extends BaseController
         $socmed = [
             'Intagram',
             'Linkedin',
-            'Twitter'
+            'Email'
         ];
         foreach ($socmed as $socmed) {
             $data_socmed = [
@@ -119,7 +119,7 @@ class Team extends BaseController
         $socmed = [
             'Intagram',
             'Linkedin',
-            'Twitter'
+            'Email'
         ];
         $this->MSocmed->where('id_team', $id_team)->delete();
         foreach ($socmed as $socmed) {

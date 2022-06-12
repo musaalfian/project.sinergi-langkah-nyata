@@ -55,7 +55,7 @@
         padding: 80px 0;
     }
     .hero__tim .foto__leader img {
-        max-width: 400px;
+        max-width: 300px;
         height: auto;
     }
     .hero__tim .caption {
@@ -84,7 +84,7 @@
 @media screen and (min-width: 992px) {
     /*================== Hero tim ================== */
     .hero__tim .foto__leader img {
-        max-width: 600px;
+        max-width: 400px;
     }
     .hero__tim .caption h1 {
         font-size: 1.75rem;

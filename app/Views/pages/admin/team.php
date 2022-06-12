@@ -65,8 +65,8 @@
                                                 <div class="mb-3 row">
                                                     <label for="member_img" class="form-label">Image Member
                                                         <span class="red">*</span>
+                                                        <small class="m-0 grey">Max 5 MB</small>
                                                     </label>
-                                                    <small class="m-0 grey">Max 5 MB</small>
                                                     <div class="row ">
                                                         <div class="input-file input-file-image">
                                                             <img class="img-upload-preview mb-2" width="100"
@@ -108,18 +108,6 @@
                                                 <button type="submit" class="btn btn-primary">Save</button>
                                             </div>
                                         </form>
-                                        <script>
-                                        $('.input-file-image input[type="file"').change(function() {
-                                            if (this.files[0].size > 5242880) {
-                                                $(this).addClass("is-invalid");
-                                                this.value = "";
-                                            } else {
-                                                $(this).removeClass("is-invalid");
-                                                $(this).addClass("is-valid");
-                                            }
-                                            readURLEditTeam(this);
-                                        });
-                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -210,8 +198,8 @@
                                                                 <label for="member_img_<?= $dataTeam['id_team']; ?>"
                                                                     class="form-label">Image Member
                                                                     <span class="red">*</span>
+                                                                    <small class="m-0 grey">Max 5 MB</small>
                                                                 </label>
-                                                                <small class="m-0 grey">Max 2 MB</small>
                                                                 <div class="row ">
                                                                     <div class="input-file"
                                                                         id="edit_image_<?= $dataTeam['id_team']; ?>">
@@ -220,7 +208,7 @@
                                                                             width="100" height="100"
                                                                             src="<?= base_url(); ?>/assets/images/team/<?= $dataTeam['photo_team']; ?>">
                                                                         <?php } else { ?>
-                                                                        <img class="img_edit_preview_<?= $dataTeam['id_team']; ?>"
+                                                                        <img id="img_edit_preview_<?= $dataTeam['id_team']; ?>"
                                                                             width="100" height="100"
                                                                             src="https://via.placeholder.com/100">
                                                                         <?php } ?>
@@ -318,9 +306,10 @@
                         </tr>
                         <script>
                         // console.log($("#sumTeam").val());
-                        function readURLEditTeam(input) {
+                        function readURLEditTeam_<?= $dataTeam['id_team']; ?>(input) {
                             if (input.files && input.files[0]) {
                                 var reader = new FileReader();
+                                console.log(input);
                                 reader.onload = function(e) {
                                     $(input)
                                         .parent("#edit_image_<?= $dataTeam['id_team']; ?>")
@@ -337,10 +326,11 @@
                                 $(this).addClass("is-invalid");
                                 this.value = "";
                             } else {
+                                readURLEditTeam_<?= $dataTeam['id_team']; ?>(this);
+                                // console.log(this);
                                 $(this).removeClass("is-invalid");
                                 $(this).addClass("is-valid");
                             }
-                            readURLEditTeam(this);
                         });
                         </script>
                         <?php endforeach ?>
