@@ -45,12 +45,16 @@
         <div class="inovasi__content bgdarkgreen px">
           <div class="row align-items-center">
             <div class="col-md-3 col-12">
-              <img src="<?= base_url(); ?>/assets/images/innovation/<?= $innovation_data['image_innovation']; ?>" class="gambar"></img>
+              <div class="bg__main">
+                <img src="<?= base_url(); ?>/assets/images/innovation/<?= $innovation_data['image_innovation']; ?>"></img>
+              </div>
             </div>
             <div class="col-md-9 col-12">
               <div class="inovasi__header d-flex justify-content-between align-items-center mb20">
                 <h1 class="orange fw-bold"><?= $innovation_data['name_innovation']; ?></h1>
-                <div class="gambar1"></div>
+                <div class="bg__second my-2">
+                  <img src="<?= base_url(); ?>/assets/images/innovation/<?= $innovation_data['image_innovation']; ?>"></img>
+                </div>
                 <div class="inovasi__desc">
                   <h5 class="text-white">Innovation <?= $i; ?></h5>
                 </div>
@@ -82,9 +86,11 @@
     <?php elseif (($i % 2) == 0) : ?>
       <div class="mx">
         <div class="inovasi__content bgdarkgreen px">
-          <div class="row row__voiry">
+          <div class="row row__voiry align-items-center">
             <div class="col-md-3 col-12">
-              <img src="<?= base_url(); ?>/assets/images/innovation/<?= $innovation_data['image_innovation']; ?>" class="gambar"></img>
+              <div class="bg__main">
+                <img src="<?= base_url(); ?>/assets/images/innovation/<?= $innovation_data['image_innovation']; ?>"></img>
+              </div>
             </div>
             <div class="col-md-9 col-12">
               <div class="inovasi__header d-flex justify-content-end justify-content-sm-between align-items-center mb20">
@@ -92,7 +98,9 @@
                   <h5 class="text-white">Innovation <?= $i ?></h5>
                 </div>
                 <h1 class="orange fw-bold voiry"><?= $innovation_data['name_innovation']; ?></h1>
-                <div class="gambar2"></div>
+                <div class="bg__second my-2">
+                  <img src="<?= base_url(); ?>/assets/images/innovation/<?= $innovation_data['image_innovation']; ?>"></img>
+                </div>
               </div>
               <div class="text-white mb20">
                 <h4 class="text-end">

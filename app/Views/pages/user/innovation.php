@@ -3,16 +3,16 @@
 <?= $this->section('content'); ?>
 
 <!-- Main page -->
-<div class="px">
-    <div class="innovation container text-center mb60">
-        <h2 class="mb20 fw-bold">Innovation</h2>
-        <div class="desc m-auto">
-            <h4 class="lightlattegray">Our expert team is made up of creatives with technical knowhow, strategists who
-                think
-                outside of the box, and developers who push innovation
-            </h4>
-        </div>
+<div class="innovation container text-center mt60">
+    <h2 class="mb20 fw-bold">Innovation</h2>
+    <div class="desc m-auto">
+        <h4 class="lightlattegray">Our expert team is made up of creatives with technical knowhow, strategists who
+            think
+            outside of the box, and developers who push innovation
+        </h4>
     </div>
+</div>
+<div class="mt60">
     <?php $i = 1; ?>
     <?php foreach ($innovation as $innovation) : ?>
         <div class="container mb60">
@@ -23,8 +23,10 @@
                         <h5 class="text-white">Innovation <?= $i++; ?></h5>
                     </div>
                 </div>
-                <img class="main__gambar mt-3 mb-3" src="<?= base_url(); ?>/assets/images/innovation/<?= $innovation['image_innovation']; ?>">
-                </img>
+                <div class="bg__inovasi mt-3 mb-3">
+                    <img src="<?= base_url(); ?>/assets/images/innovation/<?= $innovation['image_innovation']; ?>">
+                    </img>
+                </div>
                 <div class="deskripsi text-white">
                     <div class="d-flex justify-content-between align-items-center">
                         <h4 class="fw-bold">Description</h4>
@@ -74,5 +76,6 @@
         </div>
     <?php endforeach ?>
 </div>
+
 <!-- End main page -->
 <?= $this->endSection(); ?>

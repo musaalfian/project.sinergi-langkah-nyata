@@ -186,6 +186,9 @@ h6 {
 .mt80 {
     margin-top: 80px;
 }
+.mt60 {
+    margin-top: 60px;
+}
 .mb60 {
     margin-bottom: 60px;
 }
@@ -278,6 +281,12 @@ nav {
 .inovasi__header {
     display: inline !important;
 }
+.inovasi__content .bg__main {
+    display: none;
+}
+.inovasi__content img {
+    object-fit: contain;
+}
 .inovasi__header img {
     width: 100%;
     max-height: 200px;
@@ -291,6 +300,14 @@ nav {
 }
 .inovasi .gambar {
     display: none;
+}
+.inovasi .bg__main, .inovasi .bg__second {
+    width: 100%;
+    background-color: var(--white);
+    height: auto;
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 10px;
 }
 .inovasi__content {
     width: 90%;
@@ -353,6 +370,10 @@ footer h2 {
 }
 footer h3 {
     font-size: 16px;
+}
+footer .desc a:hover{
+    color: var(--orange);
+    transition: .4s;
 }
 footer .logo__indo img {
     /* width: 50%; */
@@ -419,12 +440,15 @@ footer .logo__indo img {
     .inovasi__content .row__voiry {
         flex-direction: row-reverse;
     }
-    .inovasi__content .gambar {
-        display: block;
+    .inovasi__content .bg__main {
+        display: flex;
         width: 100%;
         height: 100%;
     }
-    .inovasi__content .gambar1, .inovasi__content .gambar2 {
+    .bg__main img {
+        width: 100%;
+    }
+    .bg__second {
         display: none;
     }
     .inovasi__header {
