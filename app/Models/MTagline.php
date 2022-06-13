@@ -10,5 +10,5 @@ class MTagline extends Model
 
     protected $primaryKey = 'id_tagline';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_tagline', 'tagline', 'description_tagline'];
+    protected $allowedFields = ['id_tagline', 'tagline', 'description_tagline', 'image_tagline', 'about_us'];
 }

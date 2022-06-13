@@ -112,6 +112,16 @@ function readURL(input) {
 $('.input-file-image input[type="file"').change(function () {
   readURL(this);
 });
+// home
+$("#image_tagline").change(function () {
+  if (this.files[0].size > 5242880) {
+    $(this).addClass("is-invalid");
+    this.value = "";
+  } else {
+    $(this).removeClass("is-invalid");
+    $(this).addClass("is-valid");
+  }
+});
 
 // Innovation
 $("#img_innovation").change(function () {

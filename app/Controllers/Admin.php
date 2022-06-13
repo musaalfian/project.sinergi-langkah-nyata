@@ -34,37 +34,66 @@ class Admin extends BaseController
         $this->db = \Config\Database::connect();
         // $UsersModel = new \Myth\Auth\Models\UserModel();
     }
-    public function tagline()
+    public function home()
     {
         $tagline = $this->MTagline->find(1);
         $data = [
             'title' => 'Tagline | Admin - Sinergi Langkah Nyata',
             'tagline'   => $tagline
         ];
-        return view('pages/admin/tagline', $data);
+        return view('pages/admin/home', $data);
     }
     public function ubahTagline()
     {
         $data = [
             'title' => 'Dashboard | Admin - Sinergi Langkah Nyata',
         ];
-        return view('pages/admin/tagline', $data);
+        return view('pages/admin/home', $data);
     }
-    public function simpanUbahTagline()
+    public function saveChangeTagline()
     {
         $data = [
-            'tagline' => $this->request->getVar()
+            'tagline' => $this->request->getVar('tagline')
         ];
         $this->MTagline->update(1, $data);
-        return redirect()->to('/admin/tagline');
+        return redirect()->to('/admin/home');
     }
-    public function simpanUbahDeskripsiTagline()
+    public function saveChangeDescriptionTagline()
     {
         $data = [
-            'description_tagline' => $this->request->getVar()
+            'description_tagline' => $this->request->getVar('description_tagline')
         ];
         $this->MTagline->update(1, $data);
-        return redirect()->to('/admin/tagline');
+        return redirect()->to('/admin/home');
+    }
+    public function saveChangeImageTagline()
+    {
+        //get member's image
+        $image_tagline = $this->request->getFile('image_tagline');
+        $image_tagline_old = $this->request->getVar('image_tagline_old');
+        // is upload?
+        // dd($image_tagline);
+        if ($image_tagline->getError() != 4) {
+            // move image file to folder image
+            $name_image_tagline = $image_tagline->getRandomName();
+            $image_tagline->move('assets/images/tagline', $name_image_tagline);
+            unlink('assets/images/tagline/' . $image_tagline_old);
+        } else {
+            $name_image_tagline = null;
+        }
+        $data = [
+            'image_tagline' => $name_image_tagline
+        ];
+        $this->MTagline->update(1, $data);
+        return redirect()->to('/admin/home');
+    }
+    public function saveChangeAboutUs()
+    {
+        $data = [
+            'about_us' => $this->request->getVar('about_us')
+        ];
+        $this->MTagline->update(1, $data);
+        return redirect()->to('/admin/home');
     }
     public function email()
     {

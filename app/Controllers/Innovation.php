@@ -194,7 +194,7 @@ class Innovation extends BaseController
         // dd($img_innovation_old);
         if ($img_innovation->getError() != 4) {
             // move image file to folder image
-            $name_img_innovation = $img_innovation->getName();
+            $name_img_innovation = $img_innovation->getRandomName();
             $img_innovation->move('assets/images/innovation');
             unlink('assets/images/innovation/' . $img_innovation_old);
         } else {
